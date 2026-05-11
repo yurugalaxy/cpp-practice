@@ -1,13 +1,22 @@
 #include <iostream>
-#include "./supp/supp.h"
+
+void clearScreen() {
+	//Clear for Linux / Mac
+#ifdef linux
+	system("clear");
+#endif
+
+	//Clear for Windows
+#ifdef _WIN32
+	system("CLS");
+#endif
+}
+
 
 int main() {
-  std::cout << "Choose rock (r), paper (p) or scissors (s)\n";
-  char selected{getUserInput()};
 
-  int converted{charToInt(selected)};
+	clearScreen();
+	std::cout << "Hewo" << '\n';
 
-  std::cout << converted << '\n';
-
-  return 0;
+	return 0;
 }
