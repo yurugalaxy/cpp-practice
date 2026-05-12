@@ -1,3 +1,6 @@
 #Ignore CMake build files
 /build
 compile_commands.json
+
+#Ignore my ramblings
+design_doc.txt
